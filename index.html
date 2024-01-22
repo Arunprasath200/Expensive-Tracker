@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Sample.css" rel="stylesheet"/>
+    <title>Document</title>
+   
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
+
+  <script defer type="text/javascript" src="script.js"></script>
+  <div class="headers">
+        <h1> EXPENSIVE TRACKER</h1>
+        <div class="login">
+          <a href="login.html"> Login</a>
+        </div>
+      </div>
+    <div class="container"> 
+      <div class="ledger">
+        <h2> Income and Expensive Details</h2>
+        <h3> Your Balance</h3>
+        <h1 id="Balance">0.00</h1>
+        <div class="inc-exp-container">
+          <div class="inc">
+            <h3>Income</h3>
+            <p id="inc-amt" class="inc-amt-plus">0.00</p>
+          </div>
+          <div class="exp">
+            <h3>Expensive</h3>
+            <p id="exp-amt" class="inc-amt-min">0.00</p>
+          </div>
+        </div>
+        <form id="form" action="SaveTransaction" method="post" name="SaveTransaction">
+          <h2 class="money"> Add Transaction Details</h2>
+          <div class="control">
+            <label for="des">Description</label>
+            <input type="text" name="des" id="des" placeholder=" Description" autocomplete="off" />
+          </div>
+          <div class="control">
+            <label for="Amt">Amount</label>
+            <input type="number" name="Amt" id="Amt" placeholder=" Amount" />
+            
+          </div>
+          
+          <div class="control">
+            <label for="dat">Date</label>
+            <input type="date" name="dat" id="dat"  />
+            <button id="but" type="submit" value="submit"> Add</button>
+          </div>
+
+        </form>
+      </div>
+        <div class="transaction">
+          <h2> Transaction Details</h2>
+        <table id="table" class="table" border="">
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Button</th>
+          </tr>
+          
+        </table>
+         
+          
+        
+      </div>
+      
+    </div>
+    <div id="charts" class="charts" style="width: 100;">
+      <canvas id="myChart" class="myChart" style="border: 1px solid red;"></canvas>
+
+    </div>
+</body>
+</html>
